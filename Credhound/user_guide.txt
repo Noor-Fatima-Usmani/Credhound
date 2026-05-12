@@ -1,0 +1,122 @@
+CREDHOUND - USER GUIDE
+
+1. INTRODUCTION
+CredHound is a PyQt5-based forensic security analysis tool used for scanning files and directories to detect sensitive information such as emails, API keys, tokens, hashes, and other exposed secrets. It also supports browser artifact analysis and forensic report generation.
+
+------------------------------------------------------------
+
+2. HOW TO START THE APPLICATION
+
+Step 1: Open terminal in project folder
+Step 2: Run the following command:
+
+    python main.py
+
+This will launch the CredHound graphical interface.
+
+------------------------------------------------------------
+
+3. SELECTING A SCAN TYPE
+
+Inside the application, choose one of the following scan modes:
+- File Scan: Scan a single file
+- Directory Scan: Scan an entire folder
+- Full Scan: Scan system-wide locations (if enabled)
+
+------------------------------------------------------------
+
+4. SELECTING TARGET
+
+Click the "Browse" button and select:
+- A file for file scanning
+- A folder for directory scanning
+
+------------------------------------------------------------
+
+5. STARTING THE SCAN
+
+Click the "Start Scan" button to begin analysis.
+
+The tool will:
+- Read selected files
+- Detect sensitive patterns
+- Display results in the GUI table
+
+------------------------------------------------------------
+
+6. DETECTED PATTERNS
+
+CredHound detects:
+- Email addresses
+- API keys
+- Authentication tokens
+- Password hashes
+- Other sensitive strings
+
+------------------------------------------------------------
+
+7. VIEWING RESULTS
+
+Results are shown in a table format including:
+- Type of detection
+- Matched value
+- File location
+
+------------------------------------------------------------
+
+8. GENERATING REPORT
+
+Click "Generate Report" to export results.
+
+Output:
+- PDF forensic report generated using ReportLab
+- Includes all detected findings with timestamps
+
+------------------------------------------------------------
+
+9. BROWSER ARTIFACT ANALYSIS
+
+This module analyzes:
+- Browser history
+- Cached data
+- Session artifacts (if accessible)
+
+Note: Results may vary depending on OS and browser permissions.
+
+------------------------------------------------------------
+
+10. TROUBLESHOOTING
+
+Issue: PyQt5 not found
+Solution: pip install PyQt5
+
+Issue: reportlab not found
+Solution: pip install reportlab
+
+Issue: No results shown
+- Ensure correct file/folder selected
+- Check file permissions
+
+Issue: Permission denied
+Solution: Run with admin/root privileges
+
+    sudo python main.py   (Linux/macOS)
+
+------------------------------------------------------------
+
+11. PLATFORM SUPPORT
+
+- Windows
+- Linux (Kali, Ubuntu, etc.)
+- macOS
+
+------------------------------------------------------------
+
+12. DISCLAIMER
+
+CredHound is intended strictly for:
+- Educational purposes
+- Authorized security testing
+- Cybersecurity research
+
+Unauthorized use against systems without permission is strictly prohibited.
